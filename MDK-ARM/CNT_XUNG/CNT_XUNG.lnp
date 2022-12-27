@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"cnt_xung\startup_stm32f103xb.o"
+"cnt_xung\main.o"
+"cnt_xung\stm32f1xx_it.o"
+"cnt_xung\stm32f1xx_hal_msp.o"
+"cnt_xung\stm32f1xx_hal_gpio_ex.o"
+"cnt_xung\stm32f1xx_hal_tim.o"
+"cnt_xung\stm32f1xx_hal_tim_ex.o"
+"cnt_xung\stm32f1xx_hal.o"
+"cnt_xung\stm32f1xx_hal_rcc.o"
+"cnt_xung\stm32f1xx_hal_rcc_ex.o"
+"cnt_xung\stm32f1xx_hal_gpio.o"
+"cnt_xung\stm32f1xx_hal_dma.o"
+"cnt_xung\stm32f1xx_hal_cortex.o"
+"cnt_xung\stm32f1xx_hal_pwr.o"
+"cnt_xung\stm32f1xx_hal_flash.o"
+"cnt_xung\stm32f1xx_hal_flash_ex.o"
+"cnt_xung\stm32f1xx_hal_exti.o"
+"cnt_xung\system_stm32f1xx.o"
+--strict --scatter "CNT_XUNG\CNT_XUNG.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "CNT_XUNG.map" -o CNT_XUNG\CNT_XUNG.axf
