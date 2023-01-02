@@ -1,8 +1,8 @@
 long temp, counter = 0; //This variable will increase or decrease depending on the rotation of encoder
 int Dir,Signal,encoder_pos,target,PWM;
 
-uint8_t r = 10;
-uint8_t l = 11;
+uint8_t r = 5;
+uint8_t l = 6;
 float preT = 0;
 float preErr = 0;
 float errI = 0; 
@@ -12,8 +12,8 @@ float err = 0;
 float der = 0;
  
 
-float kp = 2;
-float ki = 0.00005;
+float kp = 1.28;
+float ki = 0.0005;
 float kd = 0.01;
 
 void setup() {
@@ -54,7 +54,7 @@ void setup() {
     }
    if (c == 'b')
   {
-    target= 2000 ;
+    target= 500 ;
     }
   if (c == 'c')
   {
@@ -112,14 +112,14 @@ void setup() {
   }
 
   PWM = (int)fabs(Signal); //PWM values cannot be negative and have to be integers
-  if (PWM > 200) //fabs() = floating point absolute value
+  if (PWM > 100) //fabs() = floating point absolute value
   {
-    PWM = 200; //capping the PWM signal - 8 bit
+    PWM = 100; //capping the PWM signal - 8 bit
   }
 
-  if (PWM < 5 && err != 0)
+  if (PWM < 18 && err != 0)
   {
-    PWM = 5;
+    PWM = 18;
   }
   if (Dir == -1) //-1 == CCW
   {

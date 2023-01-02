@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"pwmm\startup_stm32f103xb.o"
+"pwmm\main.o"
+"pwmm\stm32f1xx_it.o"
+"pwmm\stm32f1xx_hal_msp.o"
+"pwmm\stm32f1xx_hal_gpio_ex.o"
+"pwmm\stm32f1xx_hal_tim.o"
+"pwmm\stm32f1xx_hal_tim_ex.o"
+"pwmm\stm32f1xx_hal.o"
+"pwmm\stm32f1xx_hal_rcc.o"
+"pwmm\stm32f1xx_hal_rcc_ex.o"
+"pwmm\stm32f1xx_hal_gpio.o"
+"pwmm\stm32f1xx_hal_dma.o"
+"pwmm\stm32f1xx_hal_cortex.o"
+"pwmm\stm32f1xx_hal_pwr.o"
+"pwmm\stm32f1xx_hal_flash.o"
+"pwmm\stm32f1xx_hal_flash_ex.o"
+"pwmm\stm32f1xx_hal_exti.o"
+"pwmm\system_stm32f1xx.o"
+--strict --scatter "PWMM\PWMM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PWMM.map" -o PWMM\PWMM.axf
